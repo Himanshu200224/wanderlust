@@ -3,13 +3,16 @@ import { Listing } from "./models/listings.model.js";
 import review from "./models/review.model.js";
 import path from "path";
 import methodOverride from "method-override";
-import { __dirname } from "./staticFiles/utils.js";
+import { __dirname } from "./public/utils.js";
 import { initializeDb } from "./init/mongoDbConnection.js";
 import ejsMate from "ejs-mate";
 import process from "process";
+import {listingSchemaJoi,reviewSchemaJoi} from "./schemaValidation.js";
 import globalErrorHandler from "./controllers/globalErrorHandler.js";
 import asyncErrorHandler from "./controllers/asyncErrorHandler.js"
 import CustomExpressError from "./controllers/expressError.js";
+import validateReview from "./public/js/validateReview.js";
+// ------------------------------------------------------------
 const app = express();
 const err=new CustomExpressError();
 // Set up EJS engine with ejs-mate for layouts
@@ -20,9 +23,16 @@ app.set("views", path.join(process.cwd(),"/views"));
 // Middleware setup
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(process.cwd(), "/staticFiles"))); // Corrected path for static files
+app.use(express.static(path.join(process.cwd(), "/public"))); // Corrected path for static files
 app.use(methodOverride("_method"));
-
+const validateSchema=function(req,res,next){
+    let ans=listingSchemaJoi(req.body);
+    if(ans.error){
+        return res.render('printError.ejs',{ans});
+    }else{
+        return next();
+    }
+}
 try{
     // Initialize database connection
 await initializeDb();
@@ -54,8 +64,7 @@ app.get('/listings/new', (req, res) => {
 });
 
 // Create new listing route
-app.post('/listings', asyncErrorHandler(async (req, res,next) => {
-    //jaise hi nayi listing create hoti hai toh usko sidha db mein save karane ke baad '/listings' route par redirect kar do.
+app.post('/listings', validateSchema,asyncErrorHandler(async (req, res,next) => {
     const newListing = req.body.newlisting;
     const result = new Listing(newListing);
     await result.save();
@@ -77,7 +86,7 @@ app.get('/listings/:id', asyncErrorHandler(async (req, res,next) => {
 }));
 
 // Update route - updates a listing
-app.put('/listings/:id', asyncErrorHandler(async (req, res,next) => {
+app.put('/listings/:id', validateSchema,asyncErrorHandler(async (req, res,next) => {
     let { id } = req.params;
     await Listing.findByIdAndUpdate(id, { ...req.body.newlisting });
     res.redirect(`/listings/${id}`);
@@ -90,7 +99,7 @@ app.delete('/listings/:id', asyncErrorHandler(async (req, res,next) => {
     res.redirect('/listings');
 }));
 //review route
-app.post('/listings/:id/reviews',async (req,res,next)=>{
+app.post('/listings/:id/reviews',validateReview,async (req,res,next)=>{
     let result=await Listing.findById(req.params.id);
     let newReview= new review(req.body.review);
     result.reviews.push(newReview);
