@@ -9,6 +9,7 @@ export const sampleListings = [
     price: 1500,
     location: "Malibu",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Modern Loft in Downtown",
@@ -20,6 +21,7 @@ export const sampleListings = [
     price: 1200,
     location: "New York City",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Mountain Retreat",
@@ -31,6 +33,7 @@ export const sampleListings = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Historic Villa in Tuscany",
@@ -41,6 +44,7 @@ export const sampleListings = [
     price: 2500,
     location: "Florence",
     country: "Italy",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Secluded Treehouse Getaway",
@@ -62,6 +66,7 @@ export const sampleListings = [
     price: 2000,
     location: "Cancun",
     country: "Mexico",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Rustic Cabin by the Lake",
@@ -74,6 +79,7 @@ export const sampleListings = [
     price: 900,
     location: "Lake Tahoe",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Luxury Penthouse with City Views",
@@ -94,6 +100,7 @@ export const sampleListings = [
     price: 3000,
     location: "Verbier",
     country: "Switzerland",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Safari Lodge in the Serengeti",
@@ -104,6 +111,7 @@ export const sampleListings = [
     price: 4000,
     location: "Serengeti National Park",
     country: "Tanzania",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Historic Canal House",
@@ -114,6 +122,7 @@ export const sampleListings = [
     price: 1800,
     location: "Amsterdam",
     country: "Netherlands",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Private Island Retreat",
@@ -124,6 +133,7 @@ export const sampleListings = [
     price: 10000,
     location: "Fiji",
     country: "Fiji",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Charming Cottage in the Cotswolds",
@@ -134,6 +144,7 @@ export const sampleListings = [
     price: 1200,
     location: "Cotswolds",
     country: "United Kingdom",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Historic Brownstone in Boston",
@@ -144,6 +155,7 @@ export const sampleListings = [
     price: 2200,
     location: "Boston",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Beachfront Bungalow in Bali",
@@ -154,6 +166,7 @@ export const sampleListings = [
     price: 1800,
     location: "Bali",
     country: "Indonesia",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Mountain View Cabin in Banff",
@@ -164,6 +177,7 @@ export const sampleListings = [
     price: 1500,
     location: "Banff",
     country: "Canada",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Art Deco Apartment in Miami",
@@ -174,6 +188,7 @@ export const sampleListings = [
     price: 1600,
     location: "Miami",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Tropical Villa in Phuket",
@@ -184,6 +199,7 @@ export const sampleListings = [
     price: 3000,
     location: "Phuket",
     country: "Thailand",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Historic Castle in Scotland",
@@ -195,6 +211,7 @@ export const sampleListings = [
     price: 4000,
     location: "Scottish Highlands",
     country: "United Kingdom",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Desert Oasis in Dubai",
@@ -206,6 +223,7 @@ export const sampleListings = [
     price: 5000,
     location: "Dubai",
     country: "United Arab Emirates",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Rustic Log Cabin in Montana",
@@ -217,17 +235,19 @@ export const sampleListings = [
     price: 1100,
     location: "Montana",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Beachfront Villa in Greece",
     description:
       "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
     image: 
-       "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
     
     price: 2500,
     location: "Mykonos",
     country: "Greece",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Eco-Friendly Treehouse Retreat",
@@ -239,6 +259,7 @@ export const sampleListings = [
     price: 750,
     location: "Costa Rica",
     country: "Costa Rica",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Historic Cottage in Charleston",
@@ -249,6 +270,7 @@ export const sampleListings = [
     price: 1600,
     location: "Charleston",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Modern Apartment in Tokyo",
@@ -259,6 +281,7 @@ export const sampleListings = [
     price: 2000,
     location: "Tokyo",
     country: "Japan",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Lakefront Cabin in New Hampshire",
@@ -270,6 +293,7 @@ export const sampleListings = [
     price: 1200,
     location: "New Hampshire",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Luxury Villa in the Maldives",
@@ -281,6 +305,7 @@ export const sampleListings = [
     price: 6000,
     location: "Maldives",
     country: "Maldives",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Ski Chalet in Aspen",
@@ -292,6 +317,7 @@ export const sampleListings = [
     price: 4000,
     location: "Aspen",
     country: "United States",
+    owner: "67a08ed0b0723865f239efd3"
   },
   {
     title: "Secluded Beach House in Costa Rica",
@@ -301,6 +327,7 @@ export const sampleListings = [
 "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" ,  price: 1800,
     location: "Costa Rica",
     country: "Costa Rica",
+    owner: "67a08ed0b0723865f239efd3"
   },
 ];
 
