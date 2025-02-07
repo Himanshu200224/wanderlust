@@ -1,0 +1,20 @@
+@media (max-width:1000px){
+    .second-container{
+        height: 12rem !important;
+    }
+}
+/* @media (max-width:1000px){
+    .card{
+        width: 12rem;
+        height: 14rem;
+        justify-content: space-evenly;
+        gap: 1px;
+    }
+    .card image{
+        width: 50%;
+        height: 50%;
+    }
+    .card .card-body .card-title{
+        font-size: small;
+    }
+} */

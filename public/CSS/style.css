@@ -1,0 +1,65 @@
+.navbar{
+    height: 5rem !important;
+    border-bottom: 10px black !important;
+}
+.navbar div a {
+    color: black !important;
+    font-size: medium ;
+    /* font-weight: bold; */
+}
+/* card ki image ki styling */
+
+.card-body{
+    padding: 0;
+}
+.card-title a{
+    text-decoration: none;
+}
+/* cards styling main container */
+.main-container{
+    /* border: 3px solid red; */
+    margin-left: 5%;
+    margin-right: 1%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: space-around; */
+    /* gap:1px; */
+    /* align-items: center; */
+
+}
+/* cards styling */
+.card{
+    /* border: 3px solid green; */
+    border: none;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 4.3%;
+    gap: 3px;
+    
+}
+/* styling font of form */
+.form-label{
+    font-size: large;
+    font:medium 30;
+}
+
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+.comment-card{
+    border: 1px solid black;
+    margin-left: -1%;
+    display: block !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+.second-container{
+    margin-left: 5%;
+    margin-right: 1%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 28rem !important;
+    height: 40rem !important;
+}

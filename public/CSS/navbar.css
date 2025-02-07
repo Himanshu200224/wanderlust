@@ -1,0 +1,38 @@
+.navbar {
+    margin-bottom: 2;
+    width: 100%;
+    background: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    /* color: rgb(26, 26, 230); */
+    text-decoration: underline;
+    background-color: rgb(218, 164, 94);
+    border-radius: 7px;
+}
+li.signup{
+    /* margin-left: 140%; */
+}

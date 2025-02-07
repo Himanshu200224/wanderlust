@@ -1,0 +1,51 @@
+div.cardContainer a,form button{
+    width: 100%;
+}
+.card-text{
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: small;
+    font-style: normal;
+    font-variation-settings: "wdth" 120;
+    font-size: medium;
+}
+div.cardContainer{
+    /* margin-left: 0px; */
+    padding: 0;
+    scroll-behavior: smooth;
+    display: flex !important;
+    /* border: 3px solid green; */
+    width: 56vw;
+    height: 103vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+div.showCard{
+    margin-left: 0px;
+    padding: 0;
+}
+div.card-body{
+    margin-left: 1%;
+}
+.card-img-top{
+    border: 0.5px solid black;
+    box-shadow: inset;
+    height: 23rem !important;
+    width: 100% !important;
+    margin-left: .4%;
+    border-radius: 1rem;
+    object-fit: cover !important;
+}
+.submit-button{
+    width: 7rem !important;
+}
+.review-form{
+    padding-left: .5%;
+}
+.review-form textarea{
+    width: 95%;
+    height: 70%;
+}
+.review-form #customRange2{
+    width: 95%;
+}
