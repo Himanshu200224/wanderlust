@@ -1,0 +1,58 @@
+<!--jab nayi listing ko create karna ho uske liye-->
+<% layout("/layouts/boilerPlate")%>
+<body>
+    <!-- create new entry and add it into the database -->
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>create new listing</h3>
+    <form action="/listings" method="POST" novalidate class="needs-validation">
+        <!-- title -->
+        <div class="mb-2">
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="newlisting[title]" id="title" placeholder="enter name of the place" class="form-control" required>
+        <div class="invalid-feedback title-error">
+            Please enter a title</div>
+    </div>
+    <!-- description -->
+    <div class="mb-2">
+        <label for="description" class="form-label">Describe your place:</label><br>
+        <textarea name="newlisting[description]" id="description" rows="2" cols="4" placeholder="describe your place.." class="form-control" required></textarea>
+        <div class="invalid-feedback description-error">
+            Please enter a description</div>
+    </div>
+    <div class="row">
+        <!-- price -->
+        <div class="col-md-4 mb-2">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" name="newlisting[price]" id="price" placeholder="enter price of place:" class="form-control price" required min="0"></div>
+            <div class="invalid-feedback price-error validation-feedback">
+                Please enter valid price</div>
+        <!-- country -->
+    <div class="mb-2 col-md-8">
+        <label for="country" class="form-label">Country:</label>
+        <input type="text" name="newlisting[country]" id="country" placeholder="enter country" class="form-control" required>
+        <div class="invalid-feedback country-error">
+            Please enter country name</div>
+        </div>
+    </div>
+    <!-- location -->
+        <div class="col-lg-4 col-md-8 mb-2 ">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="newlisting[location]" id="location" placeholder="enter location" class="form-control" required style="width: 100%;">
+            <div class="invalid-feedback location-error">
+                Please enter a valid location</div>
+        </div>
+        <!-- image adding -->
+        <div class="mb-2">
+            <label for="image" class="form-label">Image</label>
+        <input type="file" name="newlisting[image]" id="image" class="form-control">
+        <div class="invalid-feedback image-error">
+            select an image file</div>
+        </div>
+        <button type="submit" class="btn btn-dark newform-button">Add</button>
+        <!-- when user will click this add newlisting button then a request will be gone to /newlistings route using post method -->
+    </form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!-- jab listing par edit button par click karenge toh uss lising ko add karne ke liye -->
+<% layout("/layouts/boilerPlate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Edit <%=result.title%></h3>
+    <form action="/listings/<%=result._id%>?_method=PUT" method="POST" class="needs-validation">
+        <div class="mb-2">
+        <!-- title -->
+        <label for="title" class="form-label">Title:</label>
+        <input type="text" name="newlisting[title]" id="title" value="<%=result.title%>" class="form-control" required>
+        <div class="invalid-feedback title-error">
+            Please enter a title</div>
+        </div>
+        <div class="mb-2">
+            <!-- description -->
+        <label for="description" class="form-label">Describe your place:</label><br>
+        <textarea name="newlisting[description]" id="description" rows="2" cols="4"  class="form-control" required><%=result.description%></textarea>
+        <div class="invalid-feedback description-error">
+            Please enter a description</div>
+        </div>
+        <div class="mb-2">
+            <!-- country -->
+        <label for="country" class="form-label">Country:</label>
+        <input type="text" name="newlisting[country]" id="country" value="<%=result.country%>" class="form-control" required>
+        <div class="invalid-feedback country-error">
+            Please enter country name</div>
+        </div>
+        <div class="mb-2 clo-md-4">
+        <!-- location -->
+        <label for="location" class="form-label">Location</label>
+        <input type="text" name="newlisting[location]" id="location" value="<%=result.location%>" class="form-control" required>
+        <div class="invalid-feedback location-error">
+            Please enter a location</div>
+        </div>
+        <div class="mb-2 clo-md-4">
+            <!-- price -->
+        <label for="price" class="form-label">Price:</label>
+        <input type="number" name="newlisting[price]" id="price" value="<%=result.price%>" class="form-control" required>
+        <div class="invalid-feedback price-error">
+            Please enter valid price</div>
+        </div>
+        <!-- image link -->
+        <div class="mb-2">
+            <label for="image" class="form-label">Image</label>
+        <input type="file" name="newlisting[image]" id="image" value="<%=result.image%>">
+        <div class="invalid-feedback image-error">
+            Please enter image path</div>
+        </div>
+        <button type="submit" class="btn btn-dark newform-button">edit</button>
+    </form>
+</div>
+</div>
+</body>
+</html>

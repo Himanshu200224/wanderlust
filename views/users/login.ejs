@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerPlate")%>
+    <div class="container d-flex justify-content-center align-items-center vh-100 mt-11" width="80px">
+        <div class="card p-4 shadow-lg" style="width: 350px;">
+            <h3 class="text-center mb-4">Login</h3>
+            <form action="/login" method="POST" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-outline-primary w-100">Login</button>
+                <!-- in case if user does not exists -->
+                <br>
+                <div>
+                    <p>do not have an account? <a href="/signup">signup</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./formValidation.js" type="module"></script>
+

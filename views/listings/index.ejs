@@ -1,0 +1,26 @@
+<% layout("/layouts/boilerPlate") %>
+<%=success %>
+<body>
+  <!-- <h3 id="indexh3">All Listings</h3> -->
+  <!-- Container to show data from the database in the form of cards -->
+  <br>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 main-container" style="display: flex-inline;">
+    <% for (let result of allListings) { %>
+      <div class="col mb-4 second-contaoner"> <!-- Use col to make it responsive -->
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="<%= result.image %>" alt="Image"/>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="/listings/<%= result._id %>"><%= result.title %></a>
+              <pre><%= result.location %>, <%= result.country %></pre>
+            </h5>
+            <p>&#8377;<%= result.price.toLocaleString("en-IN") %>/night</p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <script>
+    
+  </script>
+</body>

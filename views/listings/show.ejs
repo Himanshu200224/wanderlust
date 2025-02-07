@@ -1,0 +1,55 @@
+<!-- particular listing par jab index route par click karenge toh usko show karne ke liye -->
+<% layout("/layouts/boilerPlate")%>
+<body>
+    <!-- when click on a airbnb then it will show its complete details here -->
+    <div class="cardContainer mt-3 col-8 offset-2">
+    <div class="card showCard" style="width: 100%; height: 50vh;">
+        <img class="card-img-top" src="<%=result.image%>" alt="<%=result.title%>">
+        <div class="card-body">
+        <h5 class="card-title"><%=result.title%></h5>
+        <h6 class="location"><%=result.country%>,<%=result.location%></h6>
+        <p>&#8377;<%= result.price.toLocaleString("en-IN") %>/night</p>
+        <p class="card-text"><i><%=result.description%></i></p>
+        <hr>
+    </div>
+        <a href="/listings/<%=result._id%>/edit" class="btn btn-outline-primary">Edit</a>
+        <form action="/listings/<%=result._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-outline-danger mt-1">Delete</button>
+        </form>
+    </div>
+</div>
+<br>
+<!-- adding review for the current airbnb -->
+<div class="col-8 offset-2 review-div cardContainer mt-3">
+    <h5>Leave a review here:</h5>
+    <form class="review-form ml-2 needs-validation" method="POST" action="/listings/<%=result.id%>/review" name="review-form" novalidate>
+        <!-- for ratings -->
+        <label for="customRange2" class="form-label">Give ratings:</label>
+        <input type="range" class="form-range rating" min="1" max="5" id="customRange2" name="review[ratings]">
+        <!-- for comments -->
+        <label for="comment" class="form-label">Describe your experience</label><br>
+        <textarea name="review[comment]" id="comment" placeholder="Describe your experience here.." cols="55" rows="5" class="form-control comment" required></textarea><br>
+        <p class="ivalidReviewFeedback"></p>
+        <button type="submit" class="btn btn-outline-dark submit-button">Submit</button><br>
+        <hr style="width: 95%;">
+        <!-- showing all reviews on the screen -->
+        <h4>All Reviews:</h4>
+        <div class="row">
+        <!-- displaying comments of users -->
+        <% for(ans of result.reviews){ %>
+        <div class="card comment-card col-5 mb-3 ms-2">
+            <div class="card-body">
+                <h5 class="card-title">jane doe</h5>
+                <h5 class="card-text"><%=ans.comment%></h5>
+                <h6 class="card-text mb-2 text-muted">Rating: <%=ans.ratings%></h6>
+                <form action="/listings/<%=result._id%>/review/<%=ans._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-sm btn-outline-dark mb-3">Delete</button>
+                </form>
+                </div>                
+        </div>
+        <%}%>
+    </div>
+    </form>
+</div>
+</body>
+</html>
