@@ -21,7 +21,8 @@
     <%-include("../includes/navbar.ejs")%>
     <br>
     <div class="container">
-        <%-include("../includes/flash.ejs")%>
+        <%-include("../includes/successFlash.ejs")%>
+        <%-include("../includes/failureFlash.ejs")%>
         <%- body %>
     </div>
     <!-- bootstrap jsscript -->
@@ -29,6 +30,7 @@
     <script src="/js/formValidation.js"></script>
     <script src="/js/validationError.js"></script>
     <script src="/js/test.js"></script>
+    
     <!-- <script src="/js/validateReview.js"></script> -->
 </body>
 </html>

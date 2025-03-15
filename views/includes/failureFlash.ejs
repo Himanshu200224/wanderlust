@@ -1,0 +1,31 @@
+<% if(failure && failure.length > 0) { %>
+    <div class="flash-message alert alert-danger mb-2 alert-dismissible fade_show offset-1" role="alert">
+       <b> <%= failure %></b>
+        <button type="button" class="close ml-2" data-bs-dismiss="alert" aria-label="Close" style="width: 2rem !important; height: 2rem; margin-left: 2rem;">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<% } %>
+<style>
+    .flash-message {
+        background-color: #f8d7da; 
+        position: relative;
+        /* top: 56%; */
+        color: #721c24;
+        padding: 15px;
+        border: 1px solid #f5c6cb;
+        border-radius: 4px;
+        display: inline-flex;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 20px 0;
+        text-align: center;
+    }
+    .fade_show{
+        width: 26%;
+    }
+    /* button{
+        margin-left: 2rem !important;
+    } */
+</style>

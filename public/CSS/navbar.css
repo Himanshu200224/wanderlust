@@ -19,7 +19,7 @@
     display: inline;
 }
 
-.navbar ul li a {
+.navbar ul li a, .user {
     text-decoration: none;
     color: black;
     font-size: 20px;
@@ -33,6 +33,15 @@
     background-color: rgb(218, 164, 94);
     border-radius: 7px;
 }
-li.signup{
-    /* margin-left: 140%; */
+.user-nav{
+    margin-left: 20px;
+    /* margin-start:auto; */
+}
+.user{
+    margin-left: 2%;
+}
+.user:hover{
+    text-decoration: underline;
+    background-color: rgb(218, 164, 94);
+    border-radius: 7px;
 }

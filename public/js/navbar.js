@@ -1,0 +1,1 @@
+const logoutButton=document.querySelector('.logout');
